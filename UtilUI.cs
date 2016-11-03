@@ -44,6 +44,16 @@ namespace es.ivancruz.Utils
 			c.Visible = Visible;
 			dgv.Columns.Add(c);
 		}
+        public static bool PedirContrasena(ref string contrasena) {
+            bool result = false;
+            using (Utilns.Forms.FContrasena f = new Utilns.Forms.FContrasena()) {
+                if(f.ShowDialog() == DialogResult.OK) {
+                    result = true;
+                    contrasena = f.Contrasena;
+                }
+            }
+            return result;//****
+        }
 
 	}
 }
