@@ -19,7 +19,10 @@ namespace es.ivancruz.Utils
 	/// </summary>
 	public static class UtilBD
 	{
-        public static string Param(string cad) {
+        public static string Param(string cad,bool forJava = false) {
+            if (forJava) {
+                return ":par_" + cad;
+            }
             return "@par_" + cad;
         }
         public static string ParamName(string cad) {
