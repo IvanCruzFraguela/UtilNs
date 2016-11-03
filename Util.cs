@@ -17,6 +17,7 @@ namespace es.ivancruz.Utils
 	/// Description of Util.
 	/// </summary>
 	public static class Util{
+       
 		public static bool BoolFromFileString(string str)
 		{
 			return str.Equals("1");
@@ -25,7 +26,8 @@ namespace es.ivancruz.Utils
 			return value ? "1" : "0";
 		}
 
-		public static DateTime DateFromFileString(string str)
+
+        public static DateTime DateFromFileString(string str)
 		{
 			DateTime result = new DateTime(
 				Convert.ToInt32(str.Substring(0,4))
@@ -82,6 +84,21 @@ namespace es.ivancruz.Utils
                 return Text.ToLower();
             }
             return Text.Substring(0, 1).ToLower() + Text.Substring(1);
+        }
+        public static void CreaAccesoDirecto(string RutaFichero,string RutaADondeApuntaElLink,string DirectorioDeTrabajo) {
+            Type ShellType = Type.GetTypeFromProgID("WScript.Shell");
+            dynamic Shell = Activator.CreateInstance(ShellType);
+            dynamic shortcut = Shell.CreateShortcut(RutaFichero);
+            shortcut.TargetPath = RutaADondeApuntaElLink;
+            shortcut.WorkingDirectory = DirectorioDeTrabajo;
+            shortcut.Save();
+        }
+
+        public static string ToStringDateTimeSeconds(DateTime dt) {
+            return dt.ToString("dd/MM/yyyy hh:mm:ss");
+        }
+        public static object ToStringDateTime(DateTime dt) {
+            return dt.ToString("dd/MM/yyyy hh:mm");
         }
     }
 }
