@@ -12,8 +12,7 @@ using System.Data;
 using System.IO;
 using System.Text;
 
-namespace es.ivancruz.Utils
-{
+namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of UtilBD.
 	/// </summary>

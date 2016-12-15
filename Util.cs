@@ -11,8 +11,7 @@ using System.Text;
 using System.Security.Cryptography;
 
 
-namespace es.ivancruz.Utils
-{
+namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of Util.
 	/// </summary>

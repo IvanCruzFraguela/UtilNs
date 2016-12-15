@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Utilns {
+namespace IvanCruz.Utilns {
 	public class ActualList<T> : List<T> {
 		public T Actual { get; set; }
 		public new void Add(T item) {
