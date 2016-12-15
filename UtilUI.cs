@@ -9,8 +9,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace es.ivancruz.Utils
-{
+namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of UtilUI.
 	/// </summary>
@@ -46,7 +45,7 @@ namespace es.ivancruz.Utils
 		}
         public static bool PedirContrasena(ref string contrasena) {
             bool result = false;
-            using (Utilns.Forms.FContrasena f = new Utilns.Forms.FContrasena()) {
+            using (IvanCruz.Utilns.Forms.FContrasena f = new Utilns.Forms.FContrasena()) {
                 if(f.ShowDialog() == DialogResult.OK) {
                     result = true;
                     contrasena = f.Contrasena;

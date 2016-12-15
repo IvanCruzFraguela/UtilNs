@@ -10,8 +10,7 @@ using System;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace es.ivancruz.Utils
-{
+namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of MyClass.
 	/// </summary>

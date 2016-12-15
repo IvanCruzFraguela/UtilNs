@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Utilns.Forms{
+namespace IvanCruz.Utilns.Forms{
     public static class FMemo
     {
-        //todo: Pasar FMemo a utils
         private static Form form;
         public static void Show(string s)
         {

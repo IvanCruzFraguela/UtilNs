@@ -1,4 +1,4 @@
-﻿namespace Utilns.Forms {
+﻿namespace IvanCruz.Utilns.Forms {
     partial class FContrasena {
         /// <summary>
         /// Required designer variable.

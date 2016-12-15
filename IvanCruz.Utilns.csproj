@@ -7,8 +7,8 @@
     <ProjectGuid>{C17D3E73-5B04-4E73-9845-207EDE5D5580}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utilns</RootNamespace>
-    <AssemblyName>Utilns</AssemblyName>
+    <RootNamespace>IvanCruz.Utilns</RootNamespace>
+    <AssemblyName>IvanCruz.Utilns</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -27,10 +27,11 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <PlatformTarget>x64</PlatformTarget>
@@ -52,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActualList.cs" />
+    <Compile Include="Controls\CCombo.cs" />
     <Compile Include="Forms\FContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,7 +63,6 @@
     <Compile Include="Forms\FMemo.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\ComboItem.cs" />
     <Compile Include="UserControls\BotonesAceptarCancelar.cs">
       <SubType>UserControl</SubType>
     </Compile>

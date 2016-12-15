@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilns.UserControls;
 
-namespace Utilns.Forms {
+namespace IvanCruz.Utilns.Forms {
     public partial class FContrasena : Form {
         public string Contrasena {
             get {
