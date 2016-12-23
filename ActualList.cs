@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace IvanCruz.Utilns {
-	public class ActualList<T> : List<T> {
+    public class CActualList<T> : List<T> {
 		public T Actual { get; set; }
 		public new void Add(T item) {
 			base.Add(item);

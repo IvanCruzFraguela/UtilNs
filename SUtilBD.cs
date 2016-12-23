@@ -16,7 +16,7 @@ namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of UtilBD.
 	/// </summary>
-	public static class UtilBD
+	public static class SUtilBD
 	{
         public static string Param(string cad,bool forJava = false) {
             if (forJava) {

@@ -13,11 +13,11 @@ namespace IvanCruz.Utilns {
         //Indica el nivel de error hasta el cual se muestran mensajes de log. Por ejemplo LogLevel = ELogLevel.Error mostraría mensajes Fatal y Error
         ELogLevel LogLevel { get; set; }
     }
-    public class LogTextBox : ILog {
+    public class CLogTextBox : ILog {
         //Ojo al escribir procesa eventos por lo que actualiza el repintado del texbox pero también procesaría eventos de otro tipo de la aplicación.
         public ELogLevel LogLevel { get; set; } = ELogLevel.Trace;
         private TextBox tb;
-        public LogTextBox(ELogLevel logLevel, TextBox tb) {
+        public CLogTextBox(ELogLevel logLevel, TextBox tb) {
             this.LogLevel = logLevel;
             this.tb = tb;
         }
@@ -42,7 +42,7 @@ namespace IvanCruz.Utilns {
             this.WriteLn(ELogLevel.Debug, "DEBUG: " + cad, IdEvento);
         }
     }
-    public class LogDebug : ILog {
+    public class CLogDebug : ILog {
         public ELogLevel LogLevel { get; set; } = ELogLevel.Trace;
         public List<string> lMensajes = new List<string>();
         public string Get(int index) {
@@ -80,11 +80,11 @@ namespace IvanCruz.Utilns {
             }
         }
     }
-    public class LogWindows : ILog {
+    public class CLogWindows : ILog {
         public ELogLevel LogLevel { get; set; } = ELogLevel.Trace;
         string Origin;
         public bool ShowDebug = true;
-        public LogWindows(ELogLevel logLevel,string origin) {
+        public CLogWindows(ELogLevel logLevel,string origin) {
             this.LogLevel = logLevel;
             this.Origin = origin;
         }
@@ -105,7 +105,7 @@ namespace IvanCruz.Utilns {
             }
         }
     }
-    public class LogMultiple : ILog {
+    public class CLogMultiple : ILog {
         public ELogLevel LogLevel {
             get {
                 throw new ArgumentException("No se puede leer el LogLevel en un LogMultiple. Habría que hacerlo en cada log por separado.");
