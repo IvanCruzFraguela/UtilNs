@@ -10,12 +10,11 @@ using System;
 using System.Text;
 using System.Security.Cryptography;
 
-
 namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of Util.
 	/// </summary>
-	public static class Util{
+	public static class SUtil{
        
 		public static bool BoolFromFileString(string str)
 		{
@@ -24,7 +23,6 @@ namespace IvanCruz.Utilns {
 		public static string BoolToFileString(bool value){
 			return value ? "1" : "0";
 		}
-
 
         public static DateTime DateFromFileString(string str)
 		{
@@ -41,7 +39,6 @@ namespace IvanCruz.Utilns {
 		public static string DateToFileString(DateTime dt){
 			return dt.ToString("yyyyMMddHHmmss");
 		}
-
 		static public string Encrypt(string password, string salt)
 		{
 			byte[] passwordBytes = Encoding.Unicode.GetBytes(password);
@@ -51,7 +48,6 @@ namespace IvanCruz.Utilns {
 
 			return Convert.ToBase64String(cipherBytes);
 		}
-
 		static public string Decrypt(string cipher, string salt)
 		{
 			byte[] cipherBytes = Convert.FromBase64String(cipher);
@@ -64,7 +60,6 @@ namespace IvanCruz.Utilns {
         public static string DoubleQuote(string cad) {
             return "\"" + cad + "\"";
         }
-
         public static string UpperFirst(string Text) {
             if (string.IsNullOrWhiteSpace(Text)) {
                 return Text;
@@ -74,7 +69,6 @@ namespace IvanCruz.Utilns {
             }
             return Text.Substring(0, 1).ToUpper() + Text.Substring(1);
         }
-
         public static string LowerFirst(string Text) {
             if (string.IsNullOrWhiteSpace(Text)) {
                 return Text;
@@ -92,7 +86,6 @@ namespace IvanCruz.Utilns {
             shortcut.WorkingDirectory = DirectorioDeTrabajo;
             shortcut.Save();
         }
-
         public static string ToStringDateTimeSeconds(DateTime dt) {
             return dt.ToString("dd/MM/yyyy hh:mm:ss");
         }

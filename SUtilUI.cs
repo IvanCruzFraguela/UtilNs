@@ -13,7 +13,7 @@ namespace IvanCruz.Utilns {
 	/// <summary>
 	/// Description of UtilUI.
 	/// </summary>
-	public static class UtilUI
+	public static class SUtilUI
 	{
 		public static void DGVInit(DataGridView dgv, object DataSource) {
 			dgv.AutoGenerateColumns = false;

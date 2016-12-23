@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -69,11 +69,11 @@
     <Compile Include="UserControls\BotonesAceptarCancelar.Designer.cs">
       <DependentUpon>BotonesAceptarCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Util.cs" />
+    <Compile Include="SUtil.cs" />
     <Compile Include="Util2Test.cs" />
-    <Compile Include="UtilBD.cs" />
+    <Compile Include="SUtilBD.cs" />
     <Compile Include="UtilBDns\QueryParameter.cs" />
-    <Compile Include="UtilUI.cs" />
+    <Compile Include="SUtilUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
