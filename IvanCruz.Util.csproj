@@ -7,8 +7,8 @@
     <ProjectGuid>{C17D3E73-5B04-4E73-9845-207EDE5D5580}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IvanCruz.Utilns</RootNamespace>
-    <AssemblyName>IvanCruz.Utilns</AssemblyName>
+    <RootNamespace>IvanCruz.Util</RootNamespace>
+    <AssemblyName>Util</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -52,7 +52,7 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualList.cs" />
+    <Compile Include="CActualList.cs" />
     <Compile Include="Controls\CCombo.cs" />
     <Compile Include="Forms\FContrasena.cs">
       <SubType>Form</SubType>
@@ -61,8 +61,10 @@
       <DependentUpon>FContrasena.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FMemo.cs" />
+    <Compile Include="Forms\SForms.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SUtilIO.cs" />
     <Compile Include="UserControls\BotonesAceptarCancelar.cs">
       <SubType>UserControl</SubType>
     </Compile>

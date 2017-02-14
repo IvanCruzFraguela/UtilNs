@@ -10,7 +10,7 @@ using System;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace IvanCruz.Utilns {
+namespace IvanCruz.Util {
 	/// <summary>
 	/// Description of Util.
 	/// </summary>
@@ -87,10 +87,10 @@ namespace IvanCruz.Utilns {
             shortcut.Save();
         }
         public static string ToStringDateTimeSeconds(DateTime dt) {
-            return dt.ToString("dd/MM/yyyy hh:mm:ss");
+            return dt.ToString("dd/MM/yyyy HH:mm:ss");
         }
         public static object ToStringDateTime(DateTime dt) {
-            return dt.ToString("dd/MM/yyyy hh:mm");
+            return dt.ToString("dd/MM/yyyy HH:mm");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IvanCruz.Utilns {
+namespace IvanCruz.Util {
     public class CActualList<T> : List<T> {
 		public T Actual { get; set; }
 		public new void Add(T item) {

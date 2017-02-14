@@ -12,14 +12,14 @@ using System.Data;
 using System.IO;
 using System.Text;
 
-namespace IvanCruz.Utilns {
+namespace IvanCruz.Util {
 	/// <summary>
 	/// Description of UtilBD.
 	/// </summary>
 	public static class SUtilBD
 	{
         public static string Param(string cad) {
-            return "@par_" + cad;
+            return "@" + ParamName(cad);
         }
         public static string ParamName(string cad) {
             return "par_" + cad;
