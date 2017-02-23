@@ -70,10 +70,10 @@ namespace IvanCruz.Util {
         }
 
 
-        public static void AnadirColumna(DataGridView dgv, string Campo, string Titulo) {
-            AnadirColumna(dgv, Campo, Titulo, -1, true);
+        public static DataGridViewTextBoxColumn AnadirColumna(DataGridView dgv, string Campo, string Titulo) {
+            return AnadirColumna(dgv, Campo, Titulo, -1, true);
         }
-        public static void AnadirColumna(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
+        public static DataGridViewTextBoxColumn AnadirColumna(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
             DataGridViewTextBoxColumn c = new DataGridViewTextBoxColumn();
             c.DataPropertyName = Campo;
             c.HeaderText = Titulo;
@@ -83,8 +83,9 @@ namespace IvanCruz.Util {
             c.ReadOnly = true;
             c.Visible = Visible;
             dgv.Columns.Add(c);
+            return c;
         }
-        public static void AnadirColumnaCheck(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
+        public static DataGridViewCheckBoxColumn AnadirColumnaCheck(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
             DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
             c.DataPropertyName = Campo;
             c.SortMode = DataGridViewColumnSortMode.Automatic;
@@ -96,6 +97,7 @@ namespace IvanCruz.Util {
             c.Visible = Visible;
             c.FlatStyle = FlatStyle.Flat;// Para que de la sensación de no poder modificarse. Sería quitarle el 3D.
             dgv.Columns.Add(c);
+            return c;
         }
         public static bool PedirContrasena(ref string contrasena) {
             bool result = false;
