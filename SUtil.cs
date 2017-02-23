@@ -3,7 +3,7 @@
  * Usuario: ivancf
  * Fecha: 15/01/2014
  * Hora: 8:53
- * git3
+ * git2
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
