@@ -22,8 +22,9 @@ namespace IvanCruz.Util {
             form.Text = text;
             form.Padding = new Padding(3);
         }
-        public static void FormInitPrincipal(Form form) {
+        public static void FormInitPrincipal(Form form,string text) {
             form.Width = Convert.ToInt32(Math.Round(form.Height * ProporcionAurea));
+            form.Text = text;
         }
         public static void DGVInit(DataGridView dgv, object DataSource) {
             dgv.AutoGenerateColumns = false;
