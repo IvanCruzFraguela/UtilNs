@@ -18,8 +18,11 @@ namespace IvanCruz.Util {
 	/// </summary>
 	public static class SUtilBD
 	{
-        public static string Param(string cad) {
-            return "@" + ParamName(cad);
+        public static string Param(string cad,bool forJava = false) {
+            if (forJava) {
+                return ":par_" + cad;
+            }
+            return "@par_" + cad;
         }
         public static string ParamName(string cad) {
             return "par_" + cad;
