@@ -52,10 +52,17 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CActualList.cs" />
     <Compile Include="Controls\CCombo.cs" />
+    <Compile Include="Forms\CFPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CFPrincipal.Designer.cs">
+      <DependentUpon>CFPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
