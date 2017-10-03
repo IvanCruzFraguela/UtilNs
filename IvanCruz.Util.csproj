@@ -57,12 +57,31 @@
   <ItemGroup>
     <Compile Include="CActualList.cs" />
     <Compile Include="Controls\CCombo.cs" />
-    <Compile Include="Forms\CFPrincipal.cs">
+    <Compile Include="Forms\CFEdicionBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CFPrincipal.Designer.cs">
-      <DependentUpon>CFPrincipal.cs</DependentUpon>
+    <Compile Include="Forms\CFEdicionBase.Designer.cs">
+      <DependentUpon>CFEdicionBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CFListaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CFListaBase.Designer.cs">
+      <DependentUpon>CFListaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CFPanelado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CFPanelado.Designer.cs">
+      <DependentUpon>CFPanelado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CFPrincipalBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CFPrincipalBase.Designer.cs">
+      <DependentUpon>CFPrincipalBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EOperation.cs" />
     <Compile Include="Forms\FContrasena.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,13 +102,28 @@
     <Compile Include="SUtil.cs" />
     <Compile Include="Util2Test.cs" />
     <Compile Include="SUtilBD.cs" />
-    <Compile Include="UtilBDns\QueryParameter.cs" />
+    <Compile Include="UtilBD\BoException.cs" />
+    <Compile Include="UtilBD\CFieldDef.cs" />
+    <Compile Include="UtilBD\CTableDef.cs" />
+    <Compile Include="UtilBD\QueryParameter.cs" />
     <Compile Include="SUtilUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\CFEdicionBase.resx">
+      <DependentUpon>CFEdicionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CFListaBase.resx">
+      <DependentUpon>CFListaBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CFPanelado.resx">
+      <DependentUpon>CFPanelado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CFPrincipalBase.resx">
+      <DependentUpon>CFPrincipalBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FContrasena.resx">
       <DependentUpon>FContrasena.cs</DependentUpon>
     </EmbeddedResource>

@@ -6,7 +6,9 @@
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
+using IvanCruz.Util.UtilBD;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.Control;
 
@@ -26,7 +28,9 @@ namespace IvanCruz.Util {
             form.Width = Convert.ToInt32(Math.Round(form.Height * ProporcionAurea));
             form.Text = text;
         }
-        public static void DGVInit(DataGridView dgv, object DataSource) {
+
+
+		public static void DGVInit(DataGridView dgv, object DataSource) {
             dgv.AutoGenerateColumns = false;
             dgv.DataSource = DataSource;
             dgv.ReadOnly = true;
@@ -72,7 +76,7 @@ namespace IvanCruz.Util {
 
 
         public static DataGridViewTextBoxColumn AnadirColumna(DataGridView dgv, string Campo, string Titulo) {
-            return AnadirColumna(dgv, Campo, Titulo, -1, true);
+            return SUtilUI.AnadirColumna(dgv, Campo, Titulo, -1, true);
         }
         public static DataGridViewTextBoxColumn AnadirColumna(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
             DataGridViewTextBoxColumn c = new DataGridViewTextBoxColumn();
@@ -86,6 +90,9 @@ namespace IvanCruz.Util {
             dgv.Columns.Add(c);
             return c;
         }
+		public static DataGridViewTextBoxColumn AnadirColumna(DataGridView dgv, CFieldDef f) {
+			return SUtilUI.AnadirColumna(dgv,f.Name, f.Title, f.WidthInGrid, f.VisibleInGrid);
+		}
         public static DataGridViewCheckBoxColumn AnadirColumnaCheck(DataGridView dgv, string Campo, string Titulo, int ancho, bool Visible = true) {
             DataGridViewCheckBoxColumn c = new DataGridViewCheckBoxColumn();
             c.DataPropertyName = Campo;
@@ -120,5 +127,24 @@ namespace IvanCruz.Util {
                 item.Visible = visible;
             }
         }
+		public static Label CreateLabel(Control parent, int x, int y, string text) {
+			Label item = new Label();
+			item.AutoSize = true;
+			item.Left = x;
+			item.Top = y;
+			item.Text = text;
+			item.Parent = parent;
+			return item;
+		}
+		public static TextBox CreateTextBox(Control parent, int x, int y, int width,string initialText,int maxLength) {
+			TextBox item = new TextBox();
+			item.Left = x;
+			item.Top = y;
+			item.Width = width;
+			item.Text = initialText;
+			item.MaxLength = maxLength;
+			item.Parent = parent;
+			return item;
+		}
     }
 }

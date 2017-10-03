@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IvanCruz.Util.Forms {
-	public partial class CFPrincipal : Form {
-		public CFPrincipal() {
+	public partial class CFPanelado : Form {
+		public CFPanelado() {
 			InitializeComponent();
 		}
 	}
