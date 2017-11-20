@@ -3,6 +3,7 @@
  * Usuario: ivancf
  * Fecha: 15/01/2014
  * Hora: 8:53
+ * git5
  * 
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
@@ -10,7 +11,7 @@ using System;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace IvanCruz.Utilns {
+namespace IvanCruz.Util {
 	/// <summary>
 	/// Description of Util.
 	/// </summary>
@@ -39,6 +40,11 @@ namespace IvanCruz.Utilns {
 		public static string DateToFileString(DateTime dt){
 			return dt.ToString("yyyyMMddHHmmss");
 		}
+
+		public static string EmptyIfNull(string value) {
+			return (value == null) ? "" : value;
+		}
+
 		static public string Encrypt(string password, string salt)
 		{
 			byte[] passwordBytes = Encoding.Unicode.GetBytes(password);
@@ -59,6 +65,9 @@ namespace IvanCruz.Utilns {
 		}
         public static string DoubleQuote(string cad) {
             return "\"" + cad + "\"";
+        }
+        public static string Quote(string cad) {
+            return "'" + cad + "'";
         }
         public static string UpperFirst(string Text) {
             if (string.IsNullOrWhiteSpace(Text)) {
@@ -87,10 +96,10 @@ namespace IvanCruz.Utilns {
             shortcut.Save();
         }
         public static string ToStringDateTimeSeconds(DateTime dt) {
-            return dt.ToString("dd/MM/yyyy hh:mm:ss");
+            return dt.ToString("dd/MM/yyyy HH:mm:ss");
         }
         public static object ToStringDateTime(DateTime dt) {
-            return dt.ToString("dd/MM/yyyy hh:mm");
+            return dt.ToString("dd/MM/yyyy HH:mm");
         }
     }
 }

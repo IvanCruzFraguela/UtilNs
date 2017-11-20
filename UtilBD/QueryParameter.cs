@@ -8,7 +8,7 @@
  */
 using System;
 
-namespace ivancruz.Utilns.UtilBDns
+namespace IvanCruz.Util.UtilBD
 {
 	/// <summary>
 	/// Description of QueryParameter.

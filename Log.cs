@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Forms;
 
-namespace IvanCruz.Utilns {
+namespace IvanCruz.Util {
     public enum ELogLevel {  Fatal = 10, Error = 20, Warn = 30, Info = 40, Debug = 50, Trace = 60 , All = 200}
 
     public interface ILog {
-        void Error(string cad, int IdEvento);
+        void Error(string cad, int IdEvento = 0);
         void Info(string cad, int IdEvento = 0);
         void Debug(string cad, int IdEvento = 0);
         //Indica el nivel de error hasta el cual se muestran mensajes de log. Por ejemplo LogLevel = ELogLevel.Error mostraría mensajes Fatal y Error

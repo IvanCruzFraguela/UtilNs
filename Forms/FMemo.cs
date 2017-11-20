@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace IvanCruz.Utilns.Forms{
+namespace IvanCruz.Util.Forms{
     public static class FMemo
     {
         private static Form form;
