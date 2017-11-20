@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 using System.Windows.Forms;
 
 namespace Util.Controls {
@@ -69,5 +70,29 @@ namespace Util.Controls {
             comboBox.AutoCompleteSource = AutoCompleteSource.ListItems;
             comboBox.AutoCompleteMode = AutoCompleteMode.Suggest;
         }
-    }
+
+		public void SetValidValue() {
+			if(Items.Count == 0) {
+				throw new NoItemsException("No hay valores entre los que elegir uno válido");
+			}else {
+				this.Value = (this.Items[0] as CComboItem).Value;
+			}
+
+		}
+	}
+
+	[Serializable]
+	internal class NoItemsException : Exception {
+		public NoItemsException() {
+		}
+
+		public NoItemsException(string message) : base(message) {
+		}
+
+		public NoItemsException(string message, Exception innerException) : base(message, innerException) {
+		}
+
+		protected NoItemsException(SerializationInfo info, StreamingContext context) : base(info, context) {
+		}
+	}
 }

@@ -14,6 +14,7 @@ namespace IvanCruz.Util {
 	/// <summary>
 	/// Description of MyClass.
 	/// </summary>
+	[System.Obsolete("use class SUtilTest")]
 	public static class Util2Test
 	{
 		public static void EnviarTeclas(int TiempoEspera, string teclas) {

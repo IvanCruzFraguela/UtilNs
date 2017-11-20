@@ -32,15 +32,15 @@
 			this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
 			this.panelPrincipal.Name = "panelPrincipal";
-			this.panelPrincipal.Size = new System.Drawing.Size(554, 343);
+			this.panelPrincipal.Size = new System.Drawing.Size(554, 402);
 			this.panelPrincipal.TabIndex = 0;
 			// 
 			// panelBotonera
 			// 
 			this.panelBotonera.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.panelBotonera.Location = new System.Drawing.Point(0, 343);
+			this.panelBotonera.Location = new System.Drawing.Point(0, 402);
 			this.panelBotonera.Name = "panelBotonera";
-			this.panelBotonera.Size = new System.Drawing.Size(554, 100);
+			this.panelBotonera.Size = new System.Drawing.Size(554, 41);
 			this.panelBotonera.TabIndex = 1;
 			// 
 			// CFPanelado

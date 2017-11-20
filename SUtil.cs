@@ -40,6 +40,11 @@ namespace IvanCruz.Util {
 		public static string DateToFileString(DateTime dt){
 			return dt.ToString("yyyyMMddHHmmss");
 		}
+
+		public static string EmptyIfNull(string value) {
+			return (value == null) ? "" : value;
+		}
+
 		static public string Encrypt(string password, string salt)
 		{
 			byte[] passwordBytes = Encoding.Unicode.GetBytes(password);
@@ -60,6 +65,9 @@ namespace IvanCruz.Util {
 		}
         public static string DoubleQuote(string cad) {
             return "\"" + cad + "\"";
+        }
+        public static string Quote(string cad) {
+            return "'" + cad + "'";
         }
         public static string UpperFirst(string Text) {
             if (string.IsNullOrWhiteSpace(Text)) {

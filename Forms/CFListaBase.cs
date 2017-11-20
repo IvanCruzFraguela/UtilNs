@@ -10,6 +10,16 @@ using System.Windows.Forms;
 
 namespace IvanCruz.Util.Forms {
 	public  partial class CFListaBase : CFPanelado{
+		protected DataTable Table;
+		protected BindingSource Bs;
+		protected DataRow ActualRow {
+			get {
+				if (this.Bs.Current == null) {
+					return null;
+				}
+				return (this.Bs.Current as DataRowView).Row;
+			}
+		}
 		public CFListaBase() {
 			InitializeComponent();
 		}

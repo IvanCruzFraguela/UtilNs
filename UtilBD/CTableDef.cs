@@ -8,6 +8,7 @@ namespace IvanCruz.Util.UtilBD {
 	public abstract  class CTableDef {
 		public abstract string TableName { get; }
 		public abstract string SingularTitle { get; }
+		public abstract string PluralTitle { get; }
 		public abstract System.Collections.Generic.IEnumerable<CFieldDef> Fields { get; }
 
 	}

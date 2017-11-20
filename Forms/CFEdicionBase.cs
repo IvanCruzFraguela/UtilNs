@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace IvanCruz.Util.Forms {
-	public abstract partial class CFEdicionBase : CFPanelado {
+	public partial class CFEdicionBase : IvanCruz.Util.Forms.CFPanelado {
+
 		public CFEdicionBase() {
 			InitializeComponent();
 		}
@@ -23,7 +24,9 @@ namespace IvanCruz.Util.Forms {
 			this.QuiereGrabar = false;
 			this.Close();
 		}
-		protected abstract void CerrandoFormulario(object sender, FormClosingEventArgs e); 
+		protected virtual void CerrandoFormulario(object sender, FormClosingEventArgs e) {
+			MessageBox.Show("Sin implementar");
+		}
 		private void btnSalir_Click(object sender, EventArgs e) {
 			this.Salir();
 		}
@@ -35,6 +38,13 @@ namespace IvanCruz.Util.Forms {
 		}
 		protected virtual bool EsValido() {
 			return true;
-		} 
+		}
+		protected virtual void GestionarExcepcion(Exception ex, ILog log) {
+			MessageBox.Show(ex.Message);
+			log.Error(ex.Message);
+#if DEBUG
+			log.Error(ex.StackTrace);
+#endif
+		}
 	}
 }

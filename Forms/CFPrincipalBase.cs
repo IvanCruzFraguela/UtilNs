@@ -25,6 +25,7 @@ namespace IvanCruz.Util.Forms {
 			this.tbMensajes.Dock = DockStyle.Bottom;
 			this.tbMensajes.Height = this.ClientSize.Height - 300;
 			this.tbMensajes.ReadOnly = true;
+			this.tbMensajes.TabStop = false;
 		}
 
 		public TextBox TbMensajes {

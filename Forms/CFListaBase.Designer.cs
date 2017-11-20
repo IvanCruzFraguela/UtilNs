@@ -130,10 +130,10 @@
 		#endregion
 
 		protected System.Windows.Forms.DataGridView dgv;
-		private System.Windows.Forms.Button btnModificar;
 		private System.Windows.Forms.FlowLayoutPanel flpBotonera;
 		private System.Windows.Forms.FlowLayoutPanel flpDerecha;
-		private System.Windows.Forms.Button btnSalir;
-		private System.Windows.Forms.Button btnEliminar;
+		protected System.Windows.Forms.Button btnModificar;
+		protected System.Windows.Forms.Button btnSalir;
+		protected System.Windows.Forms.Button btnEliminar;
 	}
 }

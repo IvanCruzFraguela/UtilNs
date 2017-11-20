@@ -10,6 +10,7 @@ using IvanCruz.Util.UtilBD;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using Util.Controls;
 using static System.Windows.Forms.Control;
 
 namespace IvanCruz.Util {
@@ -28,7 +29,6 @@ namespace IvanCruz.Util {
             form.Width = Convert.ToInt32(Math.Round(form.Height * ProporcionAurea));
             form.Text = text;
         }
-
 
 		public static void DGVInit(DataGridView dgv, object DataSource) {
             dgv.AutoGenerateColumns = false;
@@ -138,12 +138,20 @@ namespace IvanCruz.Util {
 		}
 		public static TextBox CreateTextBox(Control parent, int x, int y, int width,string initialText,int maxLength) {
 			TextBox item = new TextBox();
+			item.Parent = parent;
 			item.Left = x;
 			item.Top = y;
 			item.Width = width;
 			item.Text = initialText;
 			item.MaxLength = maxLength;
+			return item;
+		}
+		public static CCombo CreateComboBox(Control parent, int x, int y, int width) {
+			CCombo item = new CCombo();
 			item.Parent = parent;
+			item.Left = x;
+			item.Top = y;
+			item.Width = width;
 			return item;
 		}
     }

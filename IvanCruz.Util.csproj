@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IvanCruz.Util</RootNamespace>
     <AssemblyName>Util</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -42,21 +42,25 @@
     <OutputPath>bin\x64\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Management.Instrumentation" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CFPanelado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CActualList.cs" />
     <Compile Include="Controls\CCombo.cs" />
+    <Compile Include="Forms\CFBusquedaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CFBusquedaBase.Designer.cs">
+      <DependentUpon>CFBusquedaBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CFEdicionBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,9 +72,6 @@
     </Compile>
     <Compile Include="Forms\CFListaBase.Designer.cs">
       <DependentUpon>CFListaBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\CFPanelado.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CFPanelado.Designer.cs">
       <DependentUpon>CFPanelado.cs</DependentUpon>
@@ -93,6 +94,7 @@
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SUtilIO.cs" />
+    <Compile Include="Test\SSk.cs" />
     <Compile Include="UserControls\BotonesAceptarCancelar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,7 +102,7 @@
       <DependentUpon>BotonesAceptarCancelar.cs</DependentUpon>
     </Compile>
     <Compile Include="SUtil.cs" />
-    <Compile Include="Util2Test.cs" />
+    <Compile Include="Util2Test-obsolete.cs" />
     <Compile Include="SUtilBD.cs" />
     <Compile Include="UtilBD\BoException.cs" />
     <Compile Include="UtilBD\CFieldDef.cs" />
@@ -112,14 +114,17 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\CFPanelado.resx">
+      <DependentUpon>CFPanelado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CFBusquedaBase.resx">
+      <DependentUpon>CFBusquedaBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CFEdicionBase.resx">
       <DependentUpon>CFEdicionBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CFListaBase.resx">
       <DependentUpon>CFListaBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CFPanelado.resx">
-      <DependentUpon>CFPanelado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CFPrincipalBase.resx">
       <DependentUpon>CFPrincipalBase.cs</DependentUpon>
