@@ -94,6 +94,9 @@
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SUtilIO.cs" />
+    <Compile Include="Test\CTestBase.cs" />
+    <Compile Include="Test\CTestResult.cs" />
+    <Compile Include="Test\SProgramRunner.cs" />
     <Compile Include="Test\SSk.cs" />
     <Compile Include="UserControls\BotonesAceptarCancelar.cs">
       <SubType>UserControl</SubType>

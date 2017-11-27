@@ -26,12 +26,22 @@ namespace IvanCruz.Util.Test {
 				HalfDelay = StandarDelay / 2;
 			}
 		}
+		/// <summary>
+		/// Para la ejecución la cantidad de tiempo especificada. No pinta mucho en esta clase (nos estamos cargando el Single Responsibility) pero es cómodo llamar siempre a la misma.
+		/// </summary>
+		/// <param name="miliseconds">milisegundos a parar la ejecución</param>
 		public static void Stop(int miliseconds) {
 			Thread.Sleep(miliseconds);
 		}
+		/// <summary>
+		/// Para la ejecución del programa la mitad del tiempo estandar. Actualmente se usa mucho dado que con cada envío se para antes y después del mismo.
+		/// </summary>
 		private static void StopHalfDelay() {
 			Stop(HalfDelay);
 		}
+		/// <summary>
+		/// Para la ejecución el tiempo estándar
+		/// </summary>
 		public static void Stop() {
 			Stop(StandarDelay);
 		}
